@@ -16,5 +16,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  entrypoint: /bin/bash
   image: 'Dockerfile'
