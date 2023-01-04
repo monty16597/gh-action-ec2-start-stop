@@ -1,4 +1,7 @@
 #!/bin/bash
+AWS_REGION=$INPUT_AWS_REGION
+EC2_IDS=$INPUT_EC2_IDS
+AWS_EC2_ACTION=$INPUT_AWS_EC2_ACTION
 
 if [[ $AWS_REGION == "" ]]; then
     echo "environment variable AWS_REGION is not defined"

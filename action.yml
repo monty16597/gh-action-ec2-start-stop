@@ -2,19 +2,13 @@
 name: 'Ec2-start-stop'
 description: 'Start and stop ec2'
 inputs:
-  region:  # id of input
+  AWS_REGION:  # id of input
     description: 'EC2 Region of EC2'
     required: true
-  aws_access_key:  # id of input
-    description: 'AWS access key'
+  EC2_IDS:  # id of input
+    description: 'Instance ids (comma seperated)'
     required: true
-  aws_secret_key:  # id of input
-    description: 'AWS Secret key'
-    required: true
-  ec2_id:  # id of input
-    description: 'Instance id'
-    required: true
-  action:  # id of input
+  AWS_EC2_ACTION:  # id of input
     description: 'start/stop'
     required: true
 outputs:
