@@ -1,0 +1,25 @@
+# action.yml
+name: 'Ec2-start-stop'
+description: 'Start and stop ec2'
+inputs:
+  region:  # id of input
+    description: 'EC2 Region of EC2'
+    required: true
+  aws_access_key:  # id of input
+    description: 'AWS access key'
+    required: true
+  aws_secret_key:  # id of input
+    description: 'AWS Secret key'
+    required: true
+  ec2_id:  # id of input
+    description: 'Instance id'
+    required: true
+  action:  # id of input
+    description: 'start/stop'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
