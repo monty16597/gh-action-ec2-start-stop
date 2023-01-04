@@ -24,17 +24,17 @@ echo "$EC2_IDS --> $AWS_REGION --> $AWS_EC2_ACTION"
 if [[ $AWS_EC2_ACTION == "start" ]]; then
     echo "Starting $EC2_IDS ..."
         echo "start-instances api o/p"
-        aws ec2 start-instances --instance-ids $EC2_IDS --profile playground --output json | jq '.'
+        aws ec2 start-instances --instance-ids $EC2_IDS --output json | jq '.'
         echo "instance-running api o/p"
-        aws ec2 wait instance-running --instance-ids $EC2_IDS --profile playground --output json | jq '.'
+        aws ec2 wait instance-running --instance-ids $EC2_IDS --output json | jq '.'
     echo "Started $EC2_IDS"
     exit 0
 elif [[ $AWS_EC2_ACTION == "stop" ]]; then
     echo "Stopping $EC2_IDS ..."
         echo "stop-instances api o/p"
-        aws ec2 stop-instances --instance-ids $EC2_IDS --profile playground --output json | jq '.'
+        aws ec2 stop-instances --instance-ids $EC2_IDS --output json | jq '.'
         echo "instance-stopped api o/p"
-        aws ec2 wait instance-stopped --instance-ids $EC2_IDS --profile playground --output json | jq '.'
+        aws ec2 wait instance-stopped --instance-ids $EC2_IDS --output json | jq '.'
     echo "Stopped $EC2_IDS"
     exit 0
 else
